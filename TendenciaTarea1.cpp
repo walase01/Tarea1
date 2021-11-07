@@ -3,6 +3,7 @@
 using namespace std;
 
 bool primo(int numero);
+int valor(int numero);
 
 int main(){
 	
@@ -29,7 +30,7 @@ int main(){
 		else{
 			paroimpar += " no es primo";
 		}
-		cout<<n<<". "<<suma<<": "<<paroimpar<<"\n";
+		cout<<n<<". "<<suma<<": "<<paroimpar<<"  "<<valor(suma)<<"\n";
 		otro=fibo;
 		fibo = suma;
 		n++;
@@ -49,4 +50,13 @@ bool primo(int numero){
     
     }
     return true;	
+}
+
+int valor(int numero){
+	
+	int otro = 0;
+	
+	otro = numero % 10;
+	
+	return otro;
 }
